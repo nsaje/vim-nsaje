@@ -10,9 +10,6 @@
 "execute pathogen#infect()
 "filetype plugin indent on
 "
-"" Natural splitting
-"set splitbelow
-"set splitright
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -26,6 +23,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on     " required!
 
@@ -93,3 +91,7 @@ set autochdir
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+"" Natural splitting
+set splitbelow
+set splitright
