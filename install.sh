@@ -31,4 +31,4 @@ echo "export TERM=xterm-256color" >> ~/.bashrc
 echo "Installing Vundle bundles"
 vim +BundleInstall +qall
 
-echo "Installation complete".
+echo "Installation complete."
