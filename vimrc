@@ -24,6 +24,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
 Bundle 'tpope/vim-fugitive'
+Bundle 'ivanov/vim-ipython'
 
 filetype plugin indent on     " required!
 

@@ -7,11 +7,11 @@ command -v vim >/dev/null 2>&1 || {
 
 if [[ -e ~/.vimrc ]]; then
     echo "Backing up old .vimrc"
-    cp ~/.vimrc ~/.vimrc.bak
+    mv ~/.vimrc ~/.vimrc.bak
 fi
 
 echo "Installing new .vimrc"
-cp vimrc ~/.vimrc
+ln -s $(pwd)/vimrc $HOME/.vimrc
 
 echo "Cloning Vundle"
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
