@@ -23,8 +23,19 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
-Bundle 'tpope/vim-fugitive'
+"fuzzy search
+Bundle 'kien/ctrlp.vim' 
+"git wrapper
+Bundle 'tpope/vim-fugitive' 
 Bundle 'ivanov/vim-ipython'
+Bundle 'davidhalter/jedi-vim'
+" Snippets manager (SnipMate), dependencies, and snippets repo
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/vim-snippets'
+Bundle 'garbas/vim-snipmate'
+" colorscheme
+Bundle 'Wombat'
 
 filetype plugin indent on     " required!
 
@@ -56,7 +67,7 @@ map <F2> :NERDTreeToggle<CR>
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 
 " Documentation
 let g:pymode_doc = 1
@@ -96,3 +107,17 @@ set expandtab
 "" Natural splitting
 set splitbelow
 set splitright
+
+" tab navigation
+map tn :tabn<CR>
+map tp :tabp<CR>
+map tm :tabm
+map tt :tabnew
+map ts :tab split<CR>
+map <C-S-Right> :tabn<CR>
+imap <C-S-Right> <ESC>:tabn<CR>
+map <C-S-Left> :tabp<CR>
+imap <C-S-Left> <ESC>:tabp<CR>
+
+" ipython
+map lpi :source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim<CR>
