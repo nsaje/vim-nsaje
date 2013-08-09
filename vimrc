@@ -121,3 +121,9 @@ imap <C-S-Left> <ESC>:tabp<CR>
 
 " ipython
 map lpi :source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim<CR>
+
+
+" local vimrc
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
