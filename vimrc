@@ -11,6 +11,8 @@
 "filetype plugin indent on
 "
 
+set scrolloff=5
+
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -36,6 +38,8 @@ Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 " colorscheme
 Bundle 'Wombat'
+" syntax check
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on     " required!
 
@@ -122,6 +126,7 @@ imap <C-S-Left> <ESC>:tabp<CR>
 " ipython
 map lpi :source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim<CR>
 
+syntax on
 
 " local vimrc
 if filereadable(glob("~/.vimrc.local")) 
